@@ -1,9 +1,10 @@
 import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import React from 'react';
+import ImageCard from './components/ImageCard';
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Text style={styles.title}>Box Colors</Text>
       <View style={styles.boxContainer}>
         <Text style={[styles.card, styles.redCard]}>Red</Text>
@@ -20,7 +21,10 @@ export default function App() {
           <Text style={styles.scrollCards}>Green</Text>
         </View>
       </ScrollView>
-    </View>
+
+      <ImageCard />
+      <ImageCard />
+    </ScrollView>
   );
 }
 
@@ -59,6 +63,7 @@ const styles = StyleSheet.create({
   },
   scrollContainer: {
     marginTop: 8,
+
     flexDirection: 'row',
     paddingHorizontal: 8,
     alignItems: 'flex-start',
